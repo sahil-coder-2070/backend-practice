@@ -47,7 +47,7 @@ const userSchema = new Schema({
 }, { timestamps: true })
 
 
-//                            this is bcrypt method to encrypt password
+//                  this is bcrypt method to encrypt password
 
 //.pre is hook of mongoose and pre is middleware
 userSchema.pre("save", async function (next) {
