@@ -2,7 +2,7 @@
 
 const asyncHandler = (requestHandler) => {
     //req and res will be there and promise will perform as like res will run the func and cath will throw err
-    (req, res, next) => {
+    return (req, res, next) => {
         Promise.resolve(requestHandler(req, res, next)).catch((err) => next(err))
     }
 }
